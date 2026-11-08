@@ -8,6 +8,7 @@ export const bn: Messages = {
 
   menu_docs: 'ডকুমেন্টেশন',
   menu_projects: 'প্রকল্প',
+  menu_apps: 'অ্যাপ',
   menu_tool: 'টুল',
   nav_prev: 'পূর্ববর্তী',
   nav_next: 'পরবর্তী',
@@ -20,6 +21,7 @@ export const bn: Messages = {
 
   home_tagline: 'SARO Lab-এর ওপেন সোর্স প্রকল্প',
   home_projects: 'প্রকল্প',
+  home_apps: 'অ্যাপ',
   home_tools: 'টুল',
 
   proj_dat_tag: 'ডিস্ট্রিবিউটেড অ্যাক্সেস টোকেন',

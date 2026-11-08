@@ -8,6 +8,7 @@ export const zh: Messages = {
 
   menu_docs: '文档',
   menu_projects: '项目',
+  menu_apps: '应用',
   menu_tool: '工具',
   nav_prev: '上一篇',
   nav_next: '下一篇',
@@ -20,6 +21,7 @@ export const zh: Messages = {
 
   home_tagline: 'SARO Lab 开源项目',
   home_projects: '项目',
+  home_apps: '应用',
   home_tools: '工具',
 
   proj_dat_tag: '分布式访问令牌',

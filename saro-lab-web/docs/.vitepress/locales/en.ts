@@ -16,6 +16,7 @@ export const en = {
 
   menu_docs: 'Docs',
   menu_projects: 'Projects',
+  menu_apps: 'Apps',
   menu_tool: 'Tools',
   nav_prev: 'Previous',
   nav_next: 'Next',
@@ -28,6 +29,7 @@ export const en = {
 
   home_tagline: 'Open source from SARO Lab',
   home_projects: 'Projects',
+  home_apps: 'Apps',
   home_tools: 'Tools',
 
   proj_dat_tag: 'Distributed Access Token',

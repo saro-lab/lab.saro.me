@@ -8,6 +8,7 @@ export const ko: Messages = {
 
   menu_docs: '문서',
   menu_projects: '프로젝트',
+  menu_apps: '앱',
   menu_tool: '도구',
   nav_prev: '이전',
   nav_next: '다음',
@@ -20,6 +21,7 @@ export const ko: Messages = {
 
   home_tagline: 'SARO Lab 오픈소스 프로젝트',
   home_projects: '프로젝트',
+  home_apps: '앱',
   home_tools: '도구',
 
   proj_dat_tag: '분산 액세스 토큰',

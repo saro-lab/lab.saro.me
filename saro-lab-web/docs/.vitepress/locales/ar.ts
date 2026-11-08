@@ -8,6 +8,7 @@ export const ar: Messages = {
 
   menu_docs: 'التوثيق',
   menu_projects: 'المشاريع',
+  menu_apps: 'التطبيقات',
   menu_tool: 'الأدوات',
   nav_prev: 'السابق',
   nav_next: 'التالي',
@@ -20,6 +21,7 @@ export const ar: Messages = {
 
   home_tagline: 'مشاريع مفتوحة المصدر من SARO Lab',
   home_projects: 'المشاريع',
+  home_apps: 'التطبيقات',
   home_tools: 'الأدوات',
 
   proj_dat_tag: 'رمز وصول موزّع',

@@ -8,6 +8,7 @@ export const ja: Messages = {
 
   menu_docs: 'ドキュメント',
   menu_projects: 'プロジェクト',
+  menu_apps: 'アプリ',
   menu_tool: 'ツール',
   nav_prev: '前へ',
   nav_next: '次へ',
@@ -20,6 +21,7 @@ export const ja: Messages = {
 
   home_tagline: 'SARO Lab のオープンソースプロジェクト',
   home_projects: 'プロジェクト',
+  home_apps: 'アプリ',
   home_tools: 'ツール',
 
   proj_dat_tag: '分散アクセストークン',

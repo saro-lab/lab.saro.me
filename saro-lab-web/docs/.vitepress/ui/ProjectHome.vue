@@ -18,18 +18,25 @@ import ProjectCard from './ProjectCard.vue'
 import { computed } from 'vue'
 import { useTranslate } from '../src/langs'
 import { useLocale } from '../src/nav'
-import { localProjects, siteProjects } from '../src/projects'
+import { appProjects, siteProjects, toolProjects } from '../src/projects'
 import type { MessageKey } from '../locales'
 
 const { t } = useTranslate()
 const locale = useLocale()
 
-// The list itself lives in src/projects.ts; this only decides the order of the two groups.
-// 목록 자체는 src/projects.ts 가 쥐고 있고, 여기서는 두 그룹의 순서만 정한다.
-const groups = computed<{ title: MessageKey; items: typeof siteProjects }[]>(() => [
-  { title: 'home_projects', items: siteProjects },
-  { title: 'home_tools', items: localProjects.filter((project) => !project.locales || project.locales.includes(locale.value)) },
-])
+// The project registry owns membership; this decides the display order.
+// 프로젝트 분류는 src/projects.ts 에서, 표시 순서는 여기서 정한다.
+const groups = computed(() => {
+  const sections: { title: MessageKey; items: typeof siteProjects }[] = [
+    { title: 'home_projects', items: siteProjects },
+    { title: 'home_apps', items: appProjects },
+    { title: 'home_tools', items: toolProjects },
+  ]
+  return sections.map((group) => ({
+    ...group,
+    items: group.items.filter((project) => !project.locales || project.locales.includes(locale.value)),
+  })).filter((group) => group.items.length > 0)
+})
 </script>
 
 <style scoped>

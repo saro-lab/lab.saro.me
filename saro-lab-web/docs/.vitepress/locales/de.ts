@@ -8,6 +8,7 @@ export const de: Messages = {
 
   menu_docs: 'Dokumentation',
   menu_projects: 'Projekte',
+  menu_apps: 'Apps',
   menu_tool: 'Werkzeuge',
   nav_prev: 'Zurück',
   nav_next: 'Weiter',
@@ -20,6 +21,7 @@ export const de: Messages = {
 
   home_tagline: 'Open Source von SARO Lab',
   home_projects: 'Projekte',
+  home_apps: 'Apps',
   home_tools: 'Werkzeuge',
 
   proj_dat_tag: 'Distributed Access Token',

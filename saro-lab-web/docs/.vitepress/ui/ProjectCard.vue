@@ -17,7 +17,7 @@
 
     <!-- 카드 전체가 링크라 이 줄은 목적지를 알려주는 표시일 뿐, 중첩 링크가 아니다 -->
     <div class="pc-go">
-      <span class="pc-go-label">{{ isSite ? t('open_site') : t('menu_tool') }}</span>
+      <span class="pc-go-label">{{ isSite ? t('open_site') : t(project.kind === 'app' ? 'menu_apps' : 'menu_tool') }}</span>
       <svg v-if="isSite" class="pc-go-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <path d="M14 4h6v6" />

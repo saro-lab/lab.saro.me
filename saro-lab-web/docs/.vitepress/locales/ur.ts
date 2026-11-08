@@ -8,6 +8,7 @@ export const ur: Messages = {
 
   menu_docs: 'دستاویزات',
   menu_projects: 'پروجیکٹس',
+  menu_apps: 'ایپس',
   menu_tool: 'ٹولز',
   nav_prev: 'پچھلا',
   nav_next: 'اگلا',
@@ -20,6 +21,7 @@ export const ur: Messages = {
 
   home_tagline: 'SARO Lab کے اوپن سورس پروجیکٹس',
   home_projects: 'پروجیکٹس',
+  home_apps: 'ایپس',
   home_tools: 'ٹولز',
 
   proj_dat_tag: 'تقسیم شدہ ایکسیس ٹوکن',

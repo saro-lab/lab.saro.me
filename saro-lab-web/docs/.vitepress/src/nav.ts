@@ -1,7 +1,7 @@
 import { computed, type ComputedRef } from 'vue'
 import { useData } from 'vitepress'
 import type { MessageKey } from '../locales'
-import { localProjects, siteProjects } from './projects'
+import { appProjects, siteProjects, toolProjects } from './projects'
 
 export type NavLink = {
   path: string
@@ -51,8 +51,17 @@ export type NavSection = {
 // 프로젝트 레지스트리에서 만들어낸다. 주소가 두 군데 적히면 언젠가 한쪽만 고치게 된다.
 export const navSections: NavSection[] = [
   {
+    titleKey: 'menu_apps',
+    entries: appProjects.map((project) => ({
+      path: project.path!,
+      title: project.name,
+      icon: project.logo,
+      locales: project.locales,
+    })),
+  },
+  {
     titleKey: 'menu_tool',
-    entries: localProjects.map((project) => ({
+    entries: toolProjects.map((project) => ({
       path: project.path!,
       title: project.name,
       icon: project.logo,

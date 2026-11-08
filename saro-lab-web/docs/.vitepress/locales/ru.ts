@@ -8,6 +8,7 @@ export const ru: Messages = {
 
   menu_docs: 'Документация',
   menu_projects: 'Проекты',
+  menu_apps: 'Приложения',
   menu_tool: 'Инструменты',
   nav_prev: 'Назад',
   nav_next: 'Далее',
@@ -20,6 +21,7 @@ export const ru: Messages = {
 
   home_tagline: 'Проекты с открытым кодом от SARO Lab',
   home_projects: 'Проекты',
+  home_apps: 'Приложения',
   home_tools: 'Инструменты',
 
   proj_dat_tag: 'Распределённый токен доступа',

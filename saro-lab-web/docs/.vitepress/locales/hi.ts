@@ -8,6 +8,7 @@ export const hi: Messages = {
 
   menu_docs: 'दस्तावेज़',
   menu_projects: 'परियोजनाएँ',
+  menu_apps: 'ऐप्स',
   menu_tool: 'उपकरण',
   nav_prev: 'पिछला',
   nav_next: 'अगला',
@@ -20,6 +21,7 @@ export const hi: Messages = {
 
   home_tagline: 'SARO Lab की ओपन सोर्स परियोजनाएँ',
   home_projects: 'परियोजनाएँ',
+  home_apps: 'ऐप्स',
   home_tools: 'उपकरण',
 
   proj_dat_tag: 'वितरित एक्सेस टोकन',

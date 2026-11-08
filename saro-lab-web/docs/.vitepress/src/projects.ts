@@ -3,9 +3,9 @@ import type { MessageKey } from '../locales'
 // The single source of truth for every SARO Lab project shown on this site.
 // 이 사이트가 보여주는 SARO Lab 프로젝트의 단일 진실 공급원.
 
-// `site` has its own site and leaves this one; `local` lives in this repo and has a page here.
-// `site` 는 자체 사이트가 있어 밖으로 나가고, `local` 은 이 저장소 것이라 여기에 페이지가 있다.
-export type ProjectKind = 'site' | 'local'
+// `site` opens an external site; `app` and `local` have app/tool pages here.
+// `site` 는 외부 사이트로, `app` 과 `local` 은 이 사이트의 앱·도구 문서로 이동한다.
+export type ProjectKind = 'site' | 'app' | 'local'
 
 export type Project = {
   id: string
@@ -73,7 +73,7 @@ export const projects: Project[] = [
   {
     id: 'nabi-view',
     name: 'NABI VIEW',
-    kind: 'local',
+    kind: 'app',
     logo: '/logo/nabi-view.png',
     repo: 'https://github.com/saro-lab/nabi-view',
     path: '/app/nabi-view',
@@ -84,7 +84,11 @@ export const projects: Project[] = [
 
 export const siteProjects = projects.filter((p) => p.kind === 'site')
 
-export const localProjects = projects.filter((p) => p.kind === 'local')
+export const localProjects = projects.filter((p) => p.kind !== 'site')
+
+export const appProjects = localProjects.filter((p) => p.kind === 'app')
+
+export const toolProjects = localProjects.filter((p) => p.kind === 'local')
 
 export function findProject(id: string): Project | null {
   return projects.find((p) => p.id === id) || null

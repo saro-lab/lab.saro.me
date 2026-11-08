@@ -8,6 +8,7 @@ export const id: Messages = {
 
   menu_docs: 'Dokumentasi',
   menu_projects: 'Proyek',
+  menu_apps: 'Aplikasi',
   menu_tool: 'Alat',
   nav_prev: 'Sebelumnya',
   nav_next: 'Berikutnya',
@@ -20,6 +21,7 @@ export const id: Messages = {
 
   home_tagline: 'Open source dari SARO Lab',
   home_projects: 'Proyek',
+  home_apps: 'Aplikasi',
   home_tools: 'Alat',
 
   proj_dat_tag: 'Distributed Access Token',
