@@ -19,6 +19,8 @@ export type Project = {
   tagKey: MessageKey
   descKey: MessageKey
   langs?: string[]
+  /** Only list a local page in languages that have actually been written. */
+  locales?: string[]
 }
 
 export const projects: Project[] = [
@@ -68,6 +70,16 @@ export const projects: Project[] = [
     descKey: 'proj_unixtime_desc',
     langs: ['TypeScript', 'JavaScript'],
   },
+  {
+    id: 'nabi-view',
+    name: 'NABI VIEW',
+    kind: 'local',
+    logo: '/logo/nabi-view.png',
+    repo: 'https://github.com/saro-lab/nabi-view',
+    path: '/app/nabi-view',
+    tagKey: 'proj_nabi_view_tag',
+    descKey: 'proj_nabi_view_desc',
+  },
 ]
 
 export const siteProjects = projects.filter((p) => p.kind === 'site')
@@ -76,6 +88,11 @@ export const localProjects = projects.filter((p) => p.kind === 'local')
 
 export function findProject(id: string): Project | null {
   return projects.find((p) => p.id === id) || null
+}
+
+export function projectPageLocales(path: string): string[] | undefined {
+  const cleanPath = path.replace(/\/$/, '').replace(/\.html$/, '')
+  return localProjects.find((project) => project.path === cleanPath)?.locales
 }
 
 export function npmUrl(project: Project): string | null {

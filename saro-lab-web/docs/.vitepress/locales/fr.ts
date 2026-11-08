@@ -35,6 +35,9 @@ export const fr: Messages = {
     'Un éditeur WYSIWYG dont la dépendance à un framework a été entièrement supprimée : il s’intègre aussi bien au JavaScript natif qu’à React, Vue ou Svelte. Édition de texte, envoi de fichiers et alignement des tableaux sont là dès le départ, et l’ajout de fonctionnalités sur mesure comme le style, jusqu’au moindre détail, vous appartiennent.',
 
   proj_unixtime_tag: 'Temps Unix sans limites',
+  proj_nabi_view_tag: "Visionneuse d’images",
+  proj_nabi_view_desc: "Parcourez photos, bandes dessinées et images IA avec une vue double page, un diaporama et les métadonnées.",
+
   proj_unixtime_desc:
     'Une bibliothèque de dates et de fuseaux horaires qui traite exactement toute l’étendue du temps, d’avant J.-C. à un futur sans borne. Chaque objet reste immuable, ce qui empêche l’heure moyenne locale (LMT) de fausser les dates anciennes ; l’analyse des formats et la gestion des fuseaux la rendent aussi utilisable depuis npm que depuis un bundle classique.',
 

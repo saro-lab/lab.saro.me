@@ -35,6 +35,9 @@ export const zh: Messages = {
     '彻底摆脱框架依赖的 WYSIWYG 编辑器，从原生 JS 到 React、Vue、Svelte，任何环境都能灵活接入。除文本编辑、文件上传、表格对齐等丰富的基础功能外，还支持添加自定义功能与完全自由的样式定制。',
 
   proj_unixtime_tag: '无限 Unix time',
+  proj_nabi_view_tag: "图像查看器",
+  proj_nabi_view_desc: "浏览照片、漫画和 AI 图像，支持双页显示、幻灯片播放和图像信息查看。",
+
   proj_unixtime_desc:
     '能够精确处理从公元前到无限未来所有时间范围的时区与日期处理函数库。所有对象保持不可变，杜绝过去日期上的地方平均时 (LMT) 误差；支持各类格式解析与时区功能，在 npm 与原生打包环境中都能灵活使用。',
 

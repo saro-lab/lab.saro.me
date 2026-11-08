@@ -1,5 +1,6 @@
 import { useData } from 'vitepress'
 import { computed, type ComputedRef } from 'vue'
+import { projectPageLocales } from './projects'
 import {
   DEFAULT_LOCALE,
   localeCodes,
@@ -108,6 +109,14 @@ export function applyLanguage(force: string = ''): boolean {
   }
   if (!lang) {
     lang = getDefaultLanguage()
+  }
+
+  const availableLocales = projectPageLocales(path)
+  if (availableLocales && !availableLocales.includes(lang)) {
+    // An explicit language switch opens that language's home until translated.
+    // Unprefixed app links still reach the available documentation.
+    if (force) path = '/'
+    else lang = availableLocales[0]
   }
 
   const target = `/${lang}${path}`

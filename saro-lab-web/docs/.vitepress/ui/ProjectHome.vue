@@ -15,18 +15,21 @@
 
 <script setup lang="ts">
 import ProjectCard from './ProjectCard.vue'
+import { computed } from 'vue'
 import { useTranslate } from '../src/langs'
+import { useLocale } from '../src/nav'
 import { localProjects, siteProjects } from '../src/projects'
 import type { MessageKey } from '../locales'
 
 const { t } = useTranslate()
+const locale = useLocale()
 
 // The list itself lives in src/projects.ts; this only decides the order of the two groups.
 // 목록 자체는 src/projects.ts 가 쥐고 있고, 여기서는 두 그룹의 순서만 정한다.
-const groups: { title: MessageKey; items: typeof siteProjects }[] = [
+const groups = computed<{ title: MessageKey; items: typeof siteProjects }[]>(() => [
   { title: 'home_projects', items: siteProjects },
-  { title: 'home_tools', items: localProjects },
-]
+  { title: 'home_tools', items: localProjects.filter((project) => !project.locales || project.locales.includes(locale.value)) },
+])
 </script>
 
 <style scoped>

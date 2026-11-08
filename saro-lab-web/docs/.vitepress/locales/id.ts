@@ -35,6 +35,9 @@ export const id: Messages = {
     'Editor WYSIWYG yang ketergantungan frameworknya dihilangkan sepenuhnya, sehingga sama mudahnya dipasang di JavaScript murni maupun di React, Vue, atau Svelte. Penyuntingan teks, unggah berkas, dan perataan tabel sudah ada sejak awal, sementara fitur buatan sendiri dan penataan gaya hingga detail terkecil sepenuhnya di tangan Anda.',
 
   proj_unixtime_tag: 'Waktu Unix tanpa batas',
+  proj_nabi_view_tag: "Penampil gambar",
+  proj_nabi_view_desc: "Jelajahi foto, komik, dan gambar AI dengan tampilan dua halaman, tayangan slide, dan metadata gambar.",
+
   proj_unixtime_desc:
     'Pustaka tanggal dan zona waktu yang menangani seluruh rentang waktu secara tepat, dari sebelum Masehi hingga masa depan tanpa batas. Setiap objek tetap tak berubah sehingga waktu rata-rata lokal (LMT) tidak menyimpangkan tanggal lama, dan dukungan penguraian format serta zona waktu membuatnya sama luwesnya dipakai dari npm maupun dari bundel biasa.',
 

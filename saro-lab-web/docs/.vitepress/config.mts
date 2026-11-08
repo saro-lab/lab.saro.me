@@ -2,6 +2,7 @@ import { defineConfig, type HeadConfig } from 'vitepress'
 import tailwindcss from '@tailwindcss/vite'
 
 import { DEFAULT_LOCALE, localeCodes, vitepressLocales } from './locales'
+import { projectPageLocales } from './src/projects'
 
 const SITE_HOST = 'https://lab.saro.me'
 const SITE_NAME = 'SARO Lab'
@@ -68,12 +69,13 @@ export default defineConfig({
     ]
 
     if (locale) {
-      for (const code of localeCodes) {
+      const availableLocales = projectPageLocales(path) ?? localeCodes
+      for (const code of availableLocales) {
         head.push(['link', { rel: 'alternate', hreflang: code, href: `${SITE_HOST}/${code}${path}` }])
       }
       head.push([
         'link',
-        { rel: 'alternate', hreflang: 'x-default', href: `${SITE_HOST}/${DEFAULT_LOCALE}${path}` },
+        { rel: 'alternate', hreflang: 'x-default', href: `${SITE_HOST}/${availableLocales.includes(DEFAULT_LOCALE) ? DEFAULT_LOCALE : availableLocales[0]}${path}` },
       ])
     }
 
@@ -99,7 +101,7 @@ export default defineConfig({
         name: title,
         url,
         description,
-        inLanguage: locale || DEFAULT_LOCALE,
+        inLanguage: pageData.frontmatter.contentLanguage || locale || DEFAULT_LOCALE,
         publisher: { '@type': 'Organization', name: SITE_NAME, url: SITE_HOST },
       }),
     ])

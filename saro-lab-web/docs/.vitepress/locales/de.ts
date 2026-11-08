@@ -35,6 +35,9 @@ export const de: Messages = {
     'Ein WYSIWYG-Editor, dem die Framework-Abhängigkeit vollständig genommen wurde, sodass er sich in reines JavaScript genauso einfügt wie in React, Vue oder Svelte. Textbearbeitung, Datei-Upload und Tabellenausrichtung sind von Anfang an da, und sowohl eigene Funktionen als auch das Styling bis ins letzte Detail schreiben Sie selbst.',
 
   proj_unixtime_tag: 'Unix-Zeit ohne Grenzen',
+  proj_nabi_view_tag: "Bildbetrachter",
+  proj_nabi_view_desc: "Fotos, Comics und KI-Bilder mit Doppelseitenansicht, Diashow und Bildinformationen ansehen.",
+
   proj_unixtime_desc:
     'Eine Datums- und Zeitzonenbibliothek, die jeden Zeitraum exakt behandelt — von vor Christus bis in eine unbegrenzte Zukunft. Jedes Objekt bleibt unveränderlich, wodurch keine lokale mittlere Zeit (LMT) alte Daten verfälscht; Formatparsing und Zeitzonenunterstützung machen sie über npm ebenso brauchbar wie in einem einfachen Bundle.',
 

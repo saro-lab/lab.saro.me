@@ -56,6 +56,7 @@ export const navSections: NavSection[] = [
       path: project.path!,
       title: project.name,
       icon: project.logo,
+      locales: project.locales,
     })),
   },
   {

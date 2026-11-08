@@ -43,6 +43,9 @@ export const en = {
     'A WYSIWYG editor with the framework dependency removed entirely, so it drops just as easily into vanilla JS as into React, Vue, or Svelte. Text editing, file upload, and table alignment are there from the start, and both your own custom features and the styling down to the last detail are yours to write.',
 
   proj_unixtime_tag: 'Unlimited Unix time',
+  proj_nabi_view_tag: "Image viewer",
+  proj_nabi_view_desc: "Browse photos, comics, and AI images with two-page viewing, slideshows, and image metadata.",
+
   proj_unixtime_desc:
     'A date and timezone library that handles every range of time exactly, from BC to an unbounded future. Every object stays immutable, which keeps local mean time (LMT) from skewing old dates, and format parsing plus timezone support make it just as usable from npm as from a vanilla bundle.',
 
