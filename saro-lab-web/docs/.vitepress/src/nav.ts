@@ -1,7 +1,7 @@
 import { computed, type ComputedRef } from 'vue'
 import { useData } from 'vitepress'
 import type { MessageKey } from '../locales'
-import { appProjects, siteProjects, toolProjects } from './projects'
+import { appProjects, portalProjects, siteProjects, toolProjects } from './projects'
 
 export type NavLink = {
   path: string
@@ -71,6 +71,14 @@ export const navSections: NavSection[] = [
   {
     titleKey: 'menu_projects',
     entries: siteProjects.map((project) => ({
+      external: project.site!,
+      title: project.name,
+      icon: project.logo,
+    })),
+  },
+  {
+    titleKey: 'menu_portal',
+    entries: portalProjects.map((project) => ({
       external: project.site!,
       title: project.name,
       icon: project.logo,

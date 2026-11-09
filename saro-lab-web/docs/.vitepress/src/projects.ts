@@ -3,9 +3,9 @@ import type { MessageKey } from '../locales'
 // The single source of truth for every SARO Lab project shown on this site.
 // 이 사이트가 보여주는 SARO Lab 프로젝트의 단일 진실 공급원.
 
-// `site` opens an external site; `app` and `local` have app/tool pages here.
-// `site` 는 외부 사이트로, `app` 과 `local` 은 이 사이트의 앱·도구 문서로 이동한다.
-export type ProjectKind = 'site' | 'app' | 'local'
+// `site` and `portal` open external sites; `app` and `local` have pages here.
+// `site`와 `portal`은 외부 사이트로, `app`과 `local`은 이 사이트의 문서로 이동한다.
+export type ProjectKind = 'site' | 'portal' | 'app' | 'local'
 
 export type Project = {
   id: string
@@ -13,7 +13,7 @@ export type Project = {
   kind: ProjectKind
   logo: string
   site?: string
-  repo: string
+  repo?: string
   npm?: string
   path?: string
   tagKey: MessageKey
@@ -80,11 +80,22 @@ export const projects: Project[] = [
     tagKey: 'proj_nabi_view_tag',
     descKey: 'proj_nabi_view_desc',
   },
+  {
+    id: 'saro',
+    name: 'saro.me',
+    kind: 'portal',
+    logo: '/logo/saro.svg',
+    site: 'https://saro.me',
+    tagKey: 'proj_saro_tag',
+    descKey: 'proj_saro_desc',
+  },
 ]
 
 export const siteProjects = projects.filter((p) => p.kind === 'site')
 
-export const localProjects = projects.filter((p) => p.kind !== 'site')
+export const portalProjects = projects.filter((p) => p.kind === 'portal')
+
+export const localProjects = projects.filter((p) => p.kind === 'app' || p.kind === 'local')
 
 export const appProjects = localProjects.filter((p) => p.kind === 'app')
 
@@ -106,6 +117,9 @@ export function npmUrl(project: Project): string | null {
 // A visitor reading in Korean must land on the other site's Korean page, not its English one.
 // 한국어로 읽던 사람은 상대 사이트에서도 한국어 페이지에 떨어져야 한다.
 export function projectUrl(project: Project, root: string, locale: string): string {
+  // The portal keeps its language preference without locale-prefixed routes.
+  // 포털은 언어별 경로 대신 자체 언어 설정을 사용한다.
+  if (project.kind === 'portal') return project.site!
   if (project.kind === 'site') {
     return `${project.site}/${locale}/`
   }

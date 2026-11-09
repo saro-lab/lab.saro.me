@@ -45,7 +45,7 @@ const { t } = useTranslate()
 const root = useRoot()
 const locale = useLocale()
 
-const isSite = computed(() => props.project.kind === 'site')
+const isSite = computed(() => props.project.kind === 'site' || props.project.kind === 'portal')
 /* 큰 프로젝트는 자기 사이트의 현재 로케일 페이지로 나간다 — 한국어로 읽던 사람이
    영어 랜딩에 떨어지지 않도록. */
 const href = computed(() => projectUrl(props.project, root.value, locale.value))

@@ -12,19 +12,19 @@
     "deploy": "npm run docs:build && wrangler deploy"
   },
   "dependencies": {
-    "@shikijs/langs": "^4.4.2",
-    "@shikijs/themes": "^4.4.2",
+    "@shikijs/langs": "^4.6.0",
+    "@shikijs/themes": "^4.6.0",
     "infinite-unixtime": "^1.1.5",
-    "shiki": "^4.4.2"
+    "shiki": "^4.6.0"
   },
   "devDependencies": {
     "@resvg/resvg-js": "^2.6.2",
-    "@tailwindcss/vite": "^4.3.3",
-    "@types/node": "^26.2.0",
-    "tailwindcss": "^4.3.3",
+    "@tailwindcss/vite": "^4.3.5",
+    "@types/node": "^26.6.6",
+    "tailwindcss": "^4.3.5",
     "typescript": "^7.0.2",
-    "vitepress": "^2.0.0-alpha.19",
-    "vue": "^3.6.0-rc.2",
-    "wrangler": "^4.120.0"
+    "vitepress": "^2.0.0-alpha.21",
+    "vue": "^3.6.0-rc.14",
+    "wrangler": "^4.158.0"
   }
 }

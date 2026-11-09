@@ -18,7 +18,7 @@ import ProjectCard from './ProjectCard.vue'
 import { computed } from 'vue'
 import { useTranslate } from '../src/langs'
 import { useLocale } from '../src/nav'
-import { appProjects, siteProjects, toolProjects } from '../src/projects'
+import { appProjects, portalProjects, siteProjects, toolProjects } from '../src/projects'
 import type { MessageKey } from '../locales'
 
 const { t } = useTranslate()
@@ -31,6 +31,7 @@ const groups = computed(() => {
     { title: 'home_projects', items: siteProjects },
     { title: 'home_apps', items: appProjects },
     { title: 'home_tools', items: toolProjects },
+    { title: 'home_portal', items: portalProjects },
   ]
   return sections.map((group) => ({
     ...group,

@@ -1,7 +1,7 @@
 import { defineConfig, type HeadConfig } from 'vitepress'
 import tailwindcss from '@tailwindcss/vite'
 
-import { DEFAULT_LOCALE, localeCodes, vitepressLocales } from './locales'
+import { DEFAULT_LOCALE, localeCodes, vitepressLocales, messages, type LocaleCode } from './locales'
 import { projectPageLocales } from './src/projects'
 
 const SITE_HOST = 'https://lab.saro.me'
@@ -59,6 +59,14 @@ export default defineConfig({
     }
 
     const { locale, path } = splitLocale(pageData.relativePath)
+    if (path === '/app/nabi-view') {
+      const text = messages[(locale || DEFAULT_LOCALE) as LocaleCode]
+      pageData.title = text.nabi_view_page_title
+      pageData.description = text.nabi_view_page_description
+      pageData.frontmatter.title = pageData.title
+      pageData.frontmatter.description = pageData.description
+      pageData.frontmatter.contentLanguage = text.lang
+    }
     const url = locale ? `${SITE_HOST}/${locale}${path}` : SITE_HOST
     const title = pageData.title ? `${pageData.title} | ${SITE_NAME}` : SITE_NAME
     const description = pageData.description || SITE_DESC
