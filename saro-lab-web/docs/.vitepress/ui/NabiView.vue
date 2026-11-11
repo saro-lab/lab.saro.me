@@ -60,7 +60,7 @@
         <h3>{{ t('nabi_view_shortcuts') }}</h3>
         <dl class="nv-keys">
           <div v-for="shortcut in feature.shortcuts" :key="shortcut.action">
-            <dt>{{ shortcut.action }}<span>{{ shortcut.description }}</span></dt>
+            <dt>{{ shortcut.action }}<span v-if="shortcut.description">{{ shortcut.description }}</span></dt>
             <dd><template v-for="(key, keyIndex) in shortcut.keys" :key="key"><span v-if="keyIndex" class="nv-key-or">{{ t('nabi_view_or') }}</span><kbd dir="ltr">{{ key }}</kbd></template></dd>
           </div>
         </dl>
@@ -214,6 +214,47 @@ const features = computed<Feature[]>(() => [
       t('nabi_view_selection_targets'),
       t('nabi_view_selection_spread'),
       t('nabi_view_selection_random'),
+    ],
+  },
+  {
+    title: t('nabi_view_recent_title'),
+    image: '/img/nabi-view/06.webp',
+    alt: t('nabi_view_recent_alt'),
+    lines: [
+      t('nabi_view_recent_line1'),
+      t('nabi_view_recent_line2'),
+    ],
+  },
+  {
+    title: t('nabi_view_archive_title'),
+    image: '/img/nabi-view/07.webp',
+    alt: t('nabi_view_archive_alt'),
+    lines: [
+      t('nabi_view_archive_line1'),
+      t('nabi_view_archive_line2'),
+    ],
+  },
+  {
+    title: t('nabi_view_slideshow_title'),
+    image: '/img/nabi-view/09.webp',
+    alt: t('nabi_view_slideshow_alt'),
+    lines: [
+      t('nabi_view_slideshow_line1'),
+      t('nabi_view_slideshow_line2'),
+    ],
+    shortcuts: [
+      { action: t('nabi_view_start_stop'), description: t('nabi_view_slideshow_summary'), keys: ['Q'] },
+      { action: t('nabi_view_faster'), description: '', keys: [','] },
+      { action: t('nabi_view_slower'), description: '', keys: ['.'] },
+    ],
+  },
+  {
+    title: t('nabi_view_mouse_title'),
+    image: '/img/nabi-view/08.webp',
+    alt: t('nabi_view_mouse_alt'),
+    lines: [
+      t('nabi_view_mouse_line1'),
+      t('nabi_view_mouse_line2'),
     ],
   },
   {
