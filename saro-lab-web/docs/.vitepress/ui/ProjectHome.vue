@@ -28,8 +28,8 @@ const locale = useLocale()
 // 프로젝트 분류는 src/projects.ts 에서, 표시 순서는 여기서 정한다.
 const groups = computed(() => {
   const sections: { title: MessageKey; items: typeof siteProjects }[] = [
-    { title: 'home_projects', items: siteProjects },
     { title: 'home_apps', items: appProjects },
+    { title: 'home_projects', items: siteProjects },
     { title: 'home_tools', items: toolProjects },
     { title: 'home_portal', items: portalProjects },
   ]
