@@ -8,7 +8,7 @@
       <header class="g-glass drop-none @min-md:border-b! absolute w-full z-50 text-[0.9rem]">
         <div class="g-frame g-frame-full">
           <div class="header-content select-none flex items-center h-[3rem] gap-1 px-1.5 @max-[46rem]:px-2">
-            <!-- 헤더 아이콘은 전부 인라인 SVG다 — 아이콘 폰트를 기다리는 동안 글리프
+            <!-- 탐색 아이콘은 인라인 SVG다 — 아이콘 폰트를 기다리는 동안 글리프
                  자리가 비거나 네모로 뜨는 구간이 없고, currentColor 로 테마를 그대로 탄다 -->
             <div v-if="hasMenu" class="hdr-btn g-link-hover @min-[60rem]:hidden!" @click="onMenu = !onMenu">
               <svg class="hdr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
@@ -17,7 +17,7 @@
               </svg>
             </div>
             <a :href="`${root}/`" class="flex items-center gap-1.5 font-medium text-[1rem] px-1">
-              <!-- 1.15em — 마크가 갈래까지 있어서 글자 높이에 맞추면 안쪽이 뭉갠다 -->
+              <!-- 작은 헤더에서도 플라스크의 S 여백이 읽히도록 글자보다 조금 크게 둔다. -->
               <Logo class="w-[1.15em] h-[1.15em]" />SARO Lab
             </a>
             <div class="flex-1"></div>

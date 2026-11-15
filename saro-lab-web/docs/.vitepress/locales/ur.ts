@@ -91,7 +91,15 @@ export const ur: Messages = {
   unixtime_compare_note: 'موازنہ وہ سب قبول کرتا ہے جو فیکٹری قبول کرتی ہے، اس لیے Date یا سادہ عدد کو تبدیل کرنے کی ضرورت نہیں۔',
   unixtime_types: 'اقسام',
 
+  select_language: "زبان منتخب کریں",
+  search_language: "زبانیں تلاش کریں",
+
   // NABI VIEW product page.
+  nabi_view_rename_title: "فائلوں کے نام ایک ساتھ بدلیں",
+  nabi_view_rename_alt: "NABI VIEW کا متحرک ڈیمو جس میں ماؤس سے فولڈر کا نام لاگو کرنا، متن بدلنا اور فائل ناموں کی تبدیلی کی تصدیق کرنا دکھایا گیا ہے",
+  nabi_view_rename_line1: "موجودہ فولڈر میں کھلی تمام تصاویر کے نام بدلنے کے لیے مینو سے «نام یکساں کریں» منتخب کریں۔ فولڈر کے نام کے بعد ترتیب وار نمبر لگائیں اور ہندسوں کی تعداد منتخب کریں۔",
+  nabi_view_rename_line2: "آپ فائلوں کے ناموں میں مشترک متن تلاش کرکے اسے ایک ساتھ بدل بھی سکتے ہیں۔ دونوں طریقوں میں اصل فائل ایکسٹینشن برقرار رہتی ہے۔",
+  nabi_view_rename_line3: "پہلے پیش نظارہ دیکھیں، پھر فائلوں کے اصل نام بدلنے کے لیے ونڈو کے نیچے «تبدیلیاں لاگو کریں» پر کلک کریں۔ یہ مقامی فولڈروں کی فائلوں کے لیے ہے، آرکائیوز کے اندر موجود تصاویر کے لیے نہیں۔",
   nabi_view_page_title: "NABI VIEW — تصاویر دیکھنے کی ایپ",
   nabi_view_page_description: "NABI VIEW سے تصاویر، کامکس اور AI سے بنی تصاویر دیکھیں۔ یہ مفت اور اوپن سورس ایپ دو صفحات ساتھ ساتھ دکھانے، سلائیڈ شو چلانے اور تصویر کی معلومات دیکھنے کی سہولت دیتی ہے۔",
   nabi_view_logo: "سبز پہاڑوں کے ساتھ NABI VIEW کی تتلی کا آئیکن",
@@ -100,8 +108,9 @@ export const ur: Messages = {
   nabi_view_intro_second: "تصاویر جلدی اور آسانی سے دیکھیں اور ترتیب دیں۔",
   nabi_view_download: "ڈاؤن لوڈ",
   nabi_view_download_label: "⁦{platform}⁩ کے لیے ڈاؤن لوڈ کریں",
-  nabi_view_pending: "تیاری جاری ہے",
-  nabi_view_pending_label: "⁦{platform}⁩ کے لیے ڈاؤن لوڈ کی تیاری جاری ہے",
+  nabi_view_review: "زیرِ جائزہ",
+  nabi_view_review_label: "⁦{platform}⁩ ورژن زیرِ جائزہ ہے",
+  nabi_view_github_download: "⁦GitHub⁩ سے ڈاؤن لوڈ کریں",
   nabi_view_formats: "کھلنے والی فائلوں کی ایکسٹینشنز",
   nabi_view_languages: "دستیاب زبانیں",
   nabi_view_language_list: "دستیاب زبانوں کی فہرست",

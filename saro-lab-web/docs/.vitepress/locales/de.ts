@@ -91,7 +91,15 @@ export const de: Messages = {
   unixtime_compare_note: 'Vergleiche akzeptieren alles, was auch eine Factory akzeptiert; ein Date oder eine reine Zahl muss also nicht umgewandelt werden.',
   unixtime_types: 'Typen',
 
+  select_language: "Sprache auswählen",
+  search_language: "Sprachen suchen",
+
   // NABI VIEW product page.
+  nabi_view_rename_title: "Dateien auf einmal umbenennen",
+  nabi_view_rename_alt: "Animierte NABI VIEW-Demo: Mit der Maus Ordnernamen anwenden, Text ersetzen und die Dateinamenänderungen bestätigen",
+  nabi_view_rename_line1: "Wählen Sie im Menü „Namen vereinheitlichen“, um alle im aktuellen Ordner geöffneten Bilder umzubenennen. Verwenden Sie den Ordnernamen mit fortlaufenden Nummern und legen Sie deren Stellenzahl fest.",
+  nabi_view_rename_line2: "Sie können auch gemeinsame Textteile in Dateinamen suchen und gesammelt ersetzen. Beide Methoden behalten die ursprünglichen Dateiendungen bei.",
+  nabi_view_rename_line3: "Prüfen Sie die Vorschau und klicken Sie unten im Fenster auf „Änderungen anwenden“, um die Dateien umzubenennen. Dies gilt für Dateien in lokalen Ordnern, nicht für Bilder in Archiven.",
   nabi_view_page_title: "NABI VIEW — Bildbetrachter",
   nabi_view_page_description: "Entdecken Sie NABI VIEW: einen kostenlosen Open-Source-Bildbetrachter für Fotos, Comics und KI-Bilder mit Doppelseitenansicht, Diashow und Bildinformationen.",
   nabi_view_logo: "NABI VIEW-Schmetterlingssymbol mit grünen Bergen",
@@ -100,8 +108,9 @@ export const de: Messages = {
   nabi_view_intro_second: "Bilder schnell und einfach ansehen und ordnen.",
   nabi_view_download: "Herunterladen",
   nabi_view_download_label: "Für {platform} herunterladen",
-  nabi_view_pending: "In Vorbereitung",
-  nabi_view_pending_label: "Download für {platform} in Vorbereitung",
+  nabi_view_review: "In Prüfung",
+  nabi_view_review_label: "Die Version für {platform} wird geprüft",
+  nabi_view_github_download: "Von GitHub herunterladen",
   nabi_view_formats: "Unterstützte Formate",
   nabi_view_languages: "Unterstützte Sprachen",
   nabi_view_language_list: "Liste der unterstützten Sprachen",

@@ -91,7 +91,15 @@ export const pt: Messages = {
   unixtime_compare_note: 'As comparações aceitam tudo o que uma fábrica aceita, então um Date ou um número puro não precisa de conversão.',
   unixtime_types: 'Tipos',
 
+  select_language: "Selecionar idioma",
+  search_language: "Buscar idiomas",
+
   // NABI VIEW product page.
+  nabi_view_rename_title: "Renomeie arquivos de uma só vez",
+  nabi_view_rename_alt: "Demonstração animada do NABI VIEW: aplicar o nome da pasta, substituir texto e confirmar as alterações com o mouse",
+  nabi_view_rename_line1: "Escolha “Normalizar nomes” no menu para renomear todas as imagens abertas na pasta atual. Use o nome da pasta seguido de números sequenciais e escolha a quantidade de dígitos.",
+  nabi_view_rename_line2: "Você também pode buscar e substituir um texto comum nos nomes dos arquivos de uma só vez. Os dois métodos preservam as extensões originais.",
+  nabi_view_rename_line3: "Confira a prévia e clique em “Aplicar alterações” na parte inferior da janela para renomear os arquivos. O recurso funciona com arquivos de pastas locais, não com imagens dentro de arquivos compactados.",
   nabi_view_page_title: "NABI VIEW — Visualizador de imagens",
   nabi_view_page_description: "Conheça o NABI VIEW: um visualizador gratuito e de código aberto para fotos, quadrinhos e imagens geradas por IA, com visualização de duas páginas, apresentação de slides e informações das imagens.",
   nabi_view_logo: "Ícone de borboleta do NABI VIEW com montanhas verdes",
@@ -100,8 +108,9 @@ export const pt: Messages = {
   nabi_view_intro_second: "Veja e organize imagens de forma rápida e fácil.",
   nabi_view_download: "Baixar",
   nabi_view_download_label: "Baixar para {platform}",
-  nabi_view_pending: "Em preparação",
-  nabi_view_pending_label: "Download para {platform} em preparação",
+  nabi_view_review: "Em análise",
+  nabi_view_review_label: "A versão para {platform} está em análise",
+  nabi_view_github_download: "Baixar do GitHub",
   nabi_view_formats: "Formatos compatíveis",
   nabi_view_languages: "Idiomas disponíveis",
   nabi_view_language_list: "Lista de idiomas disponíveis",

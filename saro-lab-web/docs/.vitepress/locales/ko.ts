@@ -91,7 +91,15 @@ export const ko: Messages = {
   unixtime_compare_note: '비교 함수는 팩토리가 받는 값이면 무엇이든 받으므로 Date 나 숫자를 변환할 필요가 없다.',
   unixtime_types: '타입',
 
+  select_language: "언어 선택",
+  search_language: "언어 검색",
+
   // NABI VIEW product page.
+  nabi_view_rename_title: "파일 이름 한 번에 바꾸기",
+  nabi_view_rename_alt: "마우스로 폴더명 적용, 문자 바꾸기, 최종 적용을 순서대로 누르는 NABI VIEW 이름 바꾸기 애니메이션",
+  nabi_view_rename_line1: "메뉴의 ‘이름 정규화’에서 현재 폴더에 열린 이미지 전체의 파일명을 한 번에 정리할 수 있습니다. 폴더명 뒤에 일련번호를 붙이고 숫자 자릿수도 지정하세요.",
+  nabi_view_rename_line2: "파일명에 공통으로 들어간 문자를 찾아 원하는 문자로 일괄 바꿀 수도 있습니다. 두 방식 모두 원래 확장자는 그대로 유지합니다.",
+  nabi_view_rename_line3: "예상 파일명을 먼저 확인하고, 창 아래의 ‘적용하기’를 누르면 실제 파일명이 바뀝니다. 로컬 폴더의 파일에 사용할 수 있으며, 압축 파일 내부 이미지는 대상에 포함되지 않습니다.",
   nabi_view_page_title: "NABI VIEW — 이미지 뷰어",
   nabi_view_page_description: "사진부터 만화, AI 이미지까지. 양면 보기, 슬라이드 쇼, 이미지 정보 확인을 지원하는 무료 오픈소스 이미지 뷰어 NABI VIEW를 소개합니다.",
   nabi_view_logo: "초록 산을 담은 NABI VIEW 나비 아이콘",
@@ -100,8 +108,9 @@ export const ko: Messages = {
   nabi_view_intro_second: "간편하고 빠르게 이미지를 보고 정리합니다.",
   nabi_view_download: "다운로드",
   nabi_view_download_label: "{platform}용 다운로드",
-  nabi_view_pending: "준비 중",
-  nabi_view_pending_label: "{platform} 다운로드 준비 중",
+  nabi_view_review: "심사중",
+  nabi_view_review_label: "{platform} 버전 심사중",
+  nabi_view_github_download: "GitHub에서 받기",
   nabi_view_formats: "지원 확장자",
   nabi_view_languages: "지원 언어",
   nabi_view_language_list: "지원 언어 목록",

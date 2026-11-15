@@ -91,7 +91,15 @@ export const fr: Messages = {
   unixtime_compare_note: 'Les comparaisons acceptent tout ce qu’accepte une fabrique : un Date ou un simple nombre n’a donc pas besoin d’être converti.',
   unixtime_types: 'Types',
 
+  select_language: "Choisir une langue",
+  search_language: "Rechercher une langue",
+
   // NABI VIEW product page.
+  nabi_view_rename_title: "Renommer les fichiers en une seule fois",
+  nabi_view_rename_alt: "Démonstration animée de NABI VIEW : appliquer le nom du dossier, remplacer du texte et confirmer les changements avec la souris",
+  nabi_view_rename_line1: "Choisissez « Normaliser les noms » dans le menu pour renommer toutes les images ouvertes dans le dossier actuel. Utilisez le nom du dossier suivi de numéros et choisissez le nombre de chiffres.",
+  nabi_view_rename_line2: "Vous pouvez aussi rechercher et remplacer un texte commun dans les noms de fichiers. Les deux méthodes conservent les extensions d’origine.",
+  nabi_view_rename_line3: "Vérifiez l’aperçu, puis cliquez sur « Appliquer les modifications » en bas de la fenêtre pour renommer les fichiers. Cela concerne les fichiers des dossiers locaux, pas les images dans les archives.",
   nabi_view_page_title: "NABI VIEW — Visionneuse d’images",
   nabi_view_page_description: "Découvrez NABI VIEW, une visionneuse gratuite et open source pour les photos, les bandes dessinées et les images générées par IA, avec affichage double page, diaporama et informations sur les images.",
   nabi_view_logo: "Icône papillon NABI VIEW avec des montagnes vertes",
@@ -100,8 +108,9 @@ export const fr: Messages = {
   nabi_view_intro_second: "Parcourez et organisez vos images simplement et rapidement.",
   nabi_view_download: "Télécharger",
   nabi_view_download_label: "Télécharger pour {platform}",
-  nabi_view_pending: "En préparation",
-  nabi_view_pending_label: "Téléchargement pour {platform} en préparation",
+  nabi_view_review: "En cours d’examen",
+  nabi_view_review_label: "La version pour {platform} est en cours d’examen",
+  nabi_view_github_download: "Télécharger depuis GitHub",
   nabi_view_formats: "Formats pris en charge",
   nabi_view_languages: "Langues disponibles",
   nabi_view_language_list: "Liste des langues disponibles",

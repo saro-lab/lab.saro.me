@@ -91,7 +91,15 @@ export const bn: Messages = {
   unixtime_compare_note: 'ফ্যাক্টরি যা যা নেয়, তুলনাও তার সবই নেয়, তাই Date বা সাধারণ সংখ্যা রূপান্তর করার দরকার নেই।',
   unixtime_types: 'টাইপ',
 
+  select_language: "ভাষা নির্বাচন করুন",
+  search_language: "ভাষা খুঁজুন",
+
   // NABI VIEW product page.
+  nabi_view_rename_title: "একসঙ্গে ফাইলের নাম বদলান",
+  nabi_view_rename_alt: "NABI VIEW-এর অ্যানিমেটেড ডেমো: মাউস দিয়ে ফোল্ডারের নাম প্রয়োগ, লেখা বদলানো এবং ফাইলের নাম পরিবর্তন নিশ্চিত করা",
+  nabi_view_rename_line1: "বর্তমান ফোল্ডারে খোলা সব ছবির নাম বদলাতে মেনু থেকে “নাম একরূপ করুন” বেছে নিন। ফোল্ডারের নামের পরে ক্রমিক সংখ্যা যোগ করুন এবং অঙ্কের সংখ্যা নির্ধারণ করুন।",
+  nabi_view_rename_line2: "ফাইলের নামগুলোতে থাকা একই লেখা খুঁজে একসঙ্গে বদলাতেও পারেন। দুই পদ্ধতিতেই মূল ফাইলের এক্সটেনশন অপরিবর্তিত থাকে।",
+  nabi_view_rename_line3: "আগে পূর্বরূপ দেখে নিন, তারপর ফাইলের আসল নাম বদলাতে উইন্ডোর নিচে “পরিবর্তন প্রয়োগ” চাপুন। এটি স্থানীয় ফোল্ডারের ফাইলের জন্য প্রযোজ্য, আর্কাইভের ভেতরের ছবির জন্য নয়।",
   nabi_view_page_title: "NABI VIEW — ছবি দেখার অ্যাপ",
   nabi_view_page_description: "NABI VIEW দিয়ে ফটো, কমিকস ও AI দিয়ে তৈরি ছবি দেখুন। বিনামূল্যের এই ওপেন সোর্স অ্যাপে পাশাপাশি দুই পৃষ্ঠা দেখা, স্লাইডশো চালানো ও ছবির তথ্য দেখার সুবিধা রয়েছে।",
   nabi_view_logo: "সবুজ পাহাড়সহ NABI VIEW-এর প্রজাপতি আইকন",
@@ -100,8 +108,9 @@ export const bn: Messages = {
   nabi_view_intro_second: "দ্রুত ও সহজে ছবি দেখুন এবং গুছিয়ে রাখুন।",
   nabi_view_download: "ডাউনলোড",
   nabi_view_download_label: "{platform}-এর জন্য ডাউনলোড করুন",
-  nabi_view_pending: "প্রস্তুতি চলছে",
-  nabi_view_pending_label: "{platform}-এর জন্য ডাউনলোডের প্রস্তুতি চলছে",
+  nabi_view_review: "পর্যালোচনাধীন",
+  nabi_view_review_label: "{platform} সংস্করণটি পর্যালোচনাধীন",
+  nabi_view_github_download: "GitHub থেকে ডাউনলোড করুন",
   nabi_view_formats: "সমর্থিত ফাইল এক্সটেনশন",
   nabi_view_languages: "সমর্থিত ভাষা",
   nabi_view_language_list: "সমর্থিত ভাষার তালিকা",

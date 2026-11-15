@@ -91,7 +91,15 @@ export const es: Messages = {
   unixtime_compare_note: 'Las comparaciones aceptan cualquier cosa que acepte una factoría, así que un Date o un número sin más no necesitan conversión.',
   unixtime_types: 'Tipos',
 
+  select_language: "Seleccionar idioma",
+  search_language: "Buscar idiomas",
+
   // NABI VIEW product page.
+  nabi_view_rename_title: "Renombrar archivos de una sola vez",
+  nabi_view_rename_alt: "Demostración animada de NABI VIEW: aplicar el nombre de la carpeta, reemplazar texto y confirmar los cambios con el ratón",
+  nabi_view_rename_line1: "Elige «Normalizar nombres» en el menú para renombrar todas las imágenes abiertas en la carpeta actual. Usa el nombre de la carpeta seguido de números consecutivos y elige la cantidad de dígitos.",
+  nabi_view_rename_line2: "También puedes buscar y reemplazar texto común en los nombres de los archivos. Ambos métodos conservan las extensiones originales.",
+  nabi_view_rename_line3: "Revisa la vista previa y pulsa «Aplicar cambios» en la parte inferior de la ventana para renombrar los archivos. Funciona con archivos de carpetas locales, no con imágenes dentro de archivos comprimidos.",
   nabi_view_page_title: "NABI VIEW — Visor de imágenes",
   nabi_view_page_description: "Descubre NABI VIEW, un visor gratuito y de código abierto para fotos, cómics e imágenes generadas por IA, con vista de dos páginas, presentación de diapositivas e información de las imágenes.",
   nabi_view_logo: "Icono de mariposa de NABI VIEW con montañas verdes",
@@ -100,8 +108,9 @@ export const es: Messages = {
   nabi_view_intro_second: "Explora y organiza imágenes de forma rápida y sencilla.",
   nabi_view_download: "Descargar",
   nabi_view_download_label: "Descargar para {platform}",
-  nabi_view_pending: "En preparación",
-  nabi_view_pending_label: "La descarga para {platform} está en preparación",
+  nabi_view_review: "En revisión",
+  nabi_view_review_label: "La versión para {platform} está en revisión",
+  nabi_view_github_download: "Descargar desde GitHub",
   nabi_view_formats: "Formatos compatibles",
   nabi_view_languages: "Idiomas disponibles",
   nabi_view_language_list: "Lista de idiomas disponibles",

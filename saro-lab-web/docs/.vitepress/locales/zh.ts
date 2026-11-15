@@ -91,7 +91,15 @@ export const zh: Messages = {
   unixtime_compare_note: '比较函数接受工厂函数能接受的任何值，因此无需转换 Date 或数字。',
   unixtime_types: '类型',
 
+  select_language: "选择语言",
+  search_language: "搜索语言",
+
   // NABI VIEW product page.
+  nabi_view_rename_title: "批量重命名文件",
+  nabi_view_rename_alt: "NABI VIEW 重命名动画：鼠标依次应用文件夹名称、替换文字并确认文件名更改",
+  nabi_view_rename_line1: "在菜单中选择“名称规范化”，即可整理当前文件夹中已打开的全部图片的文件名。可以在文件夹名称后添加连续编号，并指定数字位数。",
+  nabi_view_rename_line2: "也可以查找文件名中相同的文字并批量替换。两种方式都会保留原始扩展名。",
+  nabi_view_rename_line3: "先预览新文件名，再点击窗口底部的“应用更改”才会修改实际文件名。适用于本地文件夹中的文件，不包括压缩包内的图片。",
   nabi_view_page_title: "NABI VIEW — 图片查看器",
   nabi_view_page_description: "轻松浏览照片、漫画和 AI 图片。NABI VIEW 是一款免费开源的图片查看器，支持双页显示、幻灯片播放和图片信息查看。",
   nabi_view_logo: "带有绿色山峰的 NABI VIEW 蝴蝶图标",
@@ -100,8 +108,9 @@ export const zh: Messages = {
   nabi_view_intro_second: "轻松快速地浏览和整理图片。",
   nabi_view_download: "下载",
   nabi_view_download_label: "下载 {platform} 版",
-  nabi_view_pending: "准备中",
-  nabi_view_pending_label: "{platform} 版下载尚在准备中",
+  nabi_view_review: "审核中",
+  nabi_view_review_label: "{platform} 版正在审核中",
+  nabi_view_github_download: "从 GitHub 下载",
   nabi_view_formats: "支持的扩展名",
   nabi_view_languages: "支持的语言",
   nabi_view_language_list: "支持的语言列表",

@@ -5,6 +5,7 @@
       class="hdr-btn g-link-hover gap-1 px-2 text-[0.9rem] font-medium"
       aria-haspopup="dialog"
       :aria-expanded="open"
+      :aria-label="`${t('select_language')}: ${langName}`"
       @click="open = !open"
     >
       <svg class="hdr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
@@ -19,7 +20,7 @@
     <div
       v-if="open"
       role="dialog"
-      aria-label="language"
+      :aria-label="t('select_language')"
       class="lang-menu g-glass absolute top-full -end-1.5 z-50 mt-1 w-[10rem] rounded-xl py-1.5 text-center"
     >
       <input
@@ -27,8 +28,8 @@
         :value="query"
         type="text"
         class="lang-search mb-1.5 block w-full px-3 py-1.5 text-center text-[0.875rem]"
-        placeholder="language"
-        aria-label="language"
+        :placeholder="t('search_language')"
+        :aria-label="t('search_language')"
         @compositionstart="composing = true"
         @compositionend="onCompositionEnd"
         @input="onInput"
@@ -52,9 +53,10 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, ref, watch } from 'vue'
 import { useData } from 'vitepress'
-import { applyLanguage, languageList, languageMatches, languageRandom } from '../src/langs'
+import { applyLanguage, languageList, languageMatches, languageRandom, useTranslate } from '../src/langs'
 
 const { lang } = useData()
+const { t } = useTranslate()
 const languages = languageRandom()
 const langName = computed(() => (languageList as Record<string, string>)[lang.value] ?? lang.value)
 const query = ref('')

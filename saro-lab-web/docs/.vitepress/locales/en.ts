@@ -99,7 +99,15 @@ export const en = {
   unixtime_compare_note: 'Comparisons accept anything a factory accepts, so a Date or a raw number needs no conversion.',
   unixtime_types: 'Types',
 
+  select_language: "Select language",
+  search_language: "Search languages",
+
   // NABI VIEW product page.
+  nabi_view_rename_title: "Rename files in one go",
+  nabi_view_rename_alt: "Animated NABI VIEW demo showing the mouse applying folder names, replacing text, and confirming the file name changes",
+  nabi_view_rename_line1: "Choose “Normalize names” from the menu to rename all images open in the current folder. Use the folder name followed by sequential numbers, with your choice of digit count.",
+  nabi_view_rename_line2: "You can also find and replace shared text across file names. Both methods preserve the original file extensions.",
+  nabi_view_rename_line3: "Review the preview, then click “Apply changes” at the bottom of the window to rename the files. This works with local folder files, not images inside archives.",
   nabi_view_page_title: "NABI VIEW — Image viewer",
   nabi_view_page_description: "Discover NABI VIEW, a free, open-source viewer for photos, comics, and AI-generated images, with two-page viewing, slideshows, and image information.",
   nabi_view_logo: "NABI VIEW butterfly icon with green mountains",
@@ -108,8 +116,9 @@ export const en = {
   nabi_view_intro_second: "Browse and organize images quickly and easily.",
   nabi_view_download: "Download",
   nabi_view_download_label: "Download for {platform}",
-  nabi_view_pending: "In preparation",
-  nabi_view_pending_label: "Download for {platform} is in preparation",
+  nabi_view_review: "Under review",
+  nabi_view_review_label: "The {platform} version is under review",
+  nabi_view_github_download: "Download from GitHub",
   nabi_view_formats: "Supported formats",
   nabi_view_languages: "Supported languages",
   nabi_view_language_list: "List of supported languages",

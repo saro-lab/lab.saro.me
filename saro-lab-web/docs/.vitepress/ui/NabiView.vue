@@ -17,19 +17,22 @@
 
     <div class="nv-platforms">
       <template v-for="platform in platforms" :key="platform.name">
-        <a v-if="platform.download" class="nv-platform nv-platform-ready" :href="platform.href ?? releases" target="_blank" rel="noreferrer" @click="platform.storeUri && openStore($event, platform.storeUri, platform.href!)" :aria-label="t('nabi_view_download_label').replace('{platform}', platform.name)">
+        <a v-if="platform.download" class="nv-platform nv-platform-ready" :href="platform.href ?? releases" target="_blank" rel="noreferrer" @click="platform.storeUri && openStore($event, platform.storeUri, platform.href!)" :aria-label="downloadLabel(platform)">
           <svg viewBox="0 0 24 24" :fill="platform.fill ? 'currentColor' : 'none'" :stroke="platform.fill ? 'none' : 'currentColor'" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path :d="platform.path" />
           </svg>
           <span class="nv-platform-name">{{ platform.name }}</span>
-          <span class="nv-pending">{{ t('nabi_view_download') }}</span>
+          <span class="nv-platform-status">
+            <template v-if="platform.review">{{ t('nabi_view_review') }}<br />({{ t('nabi_view_github_download') }})</template>
+            <template v-else>{{ t('nabi_view_download') }}</template>
+          </span>
         </a>
-        <button v-else type="button" class="nv-platform" disabled :aria-label="t('nabi_view_pending_label').replace('{platform}', platform.name)">
+        <button v-else type="button" class="nv-platform" disabled :aria-label="t('nabi_view_review_label').replace('{platform}', platform.name)">
           <svg viewBox="0 0 24 24" :fill="platform.fill ? 'currentColor' : 'none'" :stroke="platform.fill ? 'none' : 'currentColor'" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path :d="platform.path" />
           </svg>
           <span class="nv-platform-name">{{ platform.name }}</span>
-          <span class="nv-pending">{{ t('nabi_view_pending') }}</span>
+          <span class="nv-platform-status">{{ t('nabi_view_review') }}</span>
         </button>
       </template>
     </div>
@@ -87,13 +90,19 @@ const { t } = useTranslate()
 const project = findProject('nabi-view')!
 const locale = useLocale()
 
-// Windows links to the Microsoft Store; other desktop builds link to GitHub
-// Releases. Mobile builds stay as native disabled buttons until real
-// distributions exist.
+// Windows and Android link to their stores. macOS and Linux link to GitHub
+// Releases; macOS and iOS show their pending App Store review status.
 const releases = 'https://github.com/saro-lab/nabi-view/releases'
 const storeId = '9NJB6KKBT6K8'
 
-type Platform = { name: string, download?: boolean, fill: boolean, path: string, href?: string, storeUri?: string }
+type Platform = { name: string, download?: boolean, review?: boolean, fill: boolean, path: string, href?: string, storeUri?: string }
+
+function downloadLabel(platform: Platform): string {
+  if (platform.review) {
+    return `${t('nabi_view_review_label').replace('{platform}', platform.name)} (${t('nabi_view_github_download')})`
+  }
+  return t('nabi_view_download_label').replace('{platform}', platform.name)
+}
 
 // On Windows, open the Store app directly. If nothing takes focus away from the
 // page shortly after (protocol not handled), fall back to the web listing.
@@ -119,9 +128,9 @@ function openStore(event: MouseEvent, storeUri: string, webUrl: string) {
 
 const platforms: Platform[] = [
   { name: 'Windows', download: true, href: `https://apps.microsoft.com/detail/${storeId.toLowerCase()}`, storeUri: `ms-windows-store://pdp/?productid=${storeId}`, fill: true, path:'M2 4.8 10.5 3.6v8H2V4.8Zm9.5-1.4L22 2v9.6H11.5V3.4ZM2 12.6h8.5v7.8L2 19.2v-6.6Zm9.5 0H22V22l-10.5-1.5v-7.9Z' },
-  { name: 'macOS', download: true, fill: true, path: 'M16.7 1c.1 1.3-.4 2.6-1.2 3.5-.8.9-2 1.5-3.1 1.4-.2-1.2.4-2.5 1.1-3.3.8-.9 2.1-1.5 3.2-1.6ZM20.5 17.4c-.5 1.2-.8 1.7-1.5 2.8-1 1.4-2.3 3.1-4 3.1-1.5 0-1.9-1-4-1s-2.6 1-4 1c-1.6 0-2.9-1.5-3.9-2.9C.4 16.4-.3 10.7 1.7 7.7 3.1 5.6 5.3 5.4 6.9 5.4c1.7 0 2.8 1 4.2 1 1.3 0 2.5-1 4.4-1 1.5 0 3.2.8 4.3 2.1-3.8 2.1-3.2 7.5.7 9.9Z' },
+  { name: 'macOS', download: true, review: true, fill: true, path: 'M16.7 1c.1 1.3-.4 2.6-1.2 3.5-.8.9-2 1.5-3.1 1.4-.2-1.2.4-2.5 1.1-3.3.8-.9 2.1-1.5 3.2-1.6ZM20.5 17.4c-.5 1.2-.8 1.7-1.5 2.8-1 1.4-2.3 3.1-4 3.1-1.5 0-1.9-1-4-1s-2.6 1-4 1c-1.6 0-2.9-1.5-3.9-2.9C.4 16.4-.3 10.7 1.7 7.7 3.1 5.6 5.3 5.4 6.9 5.4c1.7 0 2.8 1 4.2 1 1.3 0 2.5-1 4.4-1 1.5 0 3.2.8 4.3 2.1-3.8 2.1-3.2 7.5.7 9.9Z' },
   { name: 'Linux', download: true, fill: false, path: 'M12 2c-2.1 0-3.4 1.7-3.4 4.1 0 1.7-.6 2.7-1.7 4.2C5.6 12 4.8 14.2 4.8 16.4M12 2c2.1 0 3.4 1.7 3.4 4.1 0 1.7.6 2.7 1.7 4.2 1.3 1.7 2.1 3.9 2.1 6.1M10.4 5.8h.01M13.6 5.8h.01M10.8 8.2h2.4L12 9.6l-1.2-1.4ZM9.2 12.5c.8 1.4 4.8 1.4 5.6 0M2.8 19.2l3.4-1.9 1.9 3.6-3.6.9-1.7-2.6Zm18.4 0-3.4-1.9-1.9 3.6 3.6.9 1.7-2.6ZM8.1 20.9h7.8' },
-  { name: 'Android', fill: false, path: 'm7 4-2-2m12 2 2-2M5 10a7 7 0 0 1 14 0H5Zm3-3h.01M16 7h.01M5 12v6h14v-6M8 18v4m8-4v4M2 12v5m20-5v5' },
+  { name: 'Android', download: true, href: 'https://play.google.com/store/apps/details?id=saro.nabi.view', fill: false, path: 'm7 4-2-2m12 2 2-2M5 10a7 7 0 0 1 14 0H5Zm3-3h.01M16 7h.01M5 12v6h14v-6M8 18v4m8-4v4M2 12v5m20-5v5' },
   { name: 'iOS', fill: false, path: 'M7 2h10a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm3 3h4m-3 14h2' },
 ]
 
@@ -217,6 +226,16 @@ const features = computed<Feature[]>(() => [
     ],
   },
   {
+    title: t('nabi_view_rename_title'),
+    image: '/img/nabi-view/10.webp',
+    alt: t('nabi_view_rename_alt'),
+    lines: [
+      t('nabi_view_rename_line1'),
+      t('nabi_view_rename_line2'),
+      t('nabi_view_rename_line3'),
+    ],
+  },
+  {
     title: t('nabi_view_recent_title'),
     image: '/img/nabi-view/06.webp',
     alt: t('nabi_view_recent_alt'),
@@ -297,13 +316,13 @@ const features = computed<Feature[]>(() => [
 .nv h2 { display: flex; align-items: baseline; gap: 10px; margin: 36px 0 16px; padding: 0; border: 0; font-size: 1.05rem; color: var(--c-heading); }
 .nv-platforms { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; }
 .nv .nv-platform-ready { color: var(--c-text-1); font-family: var(--font-mono); text-decoration: none; cursor: pointer; transition: border-color .15s, color .15s; }
-.nv-platform-ready .nv-pending { color: var(--c-link-1); }
+.nv-platform-ready .nv-platform-status { color: var(--c-link-1); }
 .nv-platform-ready:hover { border-color: var(--c-link-1); }
 .nv-platform-ready:focus-visible { outline: 2px solid var(--ctrl-ring); outline-offset: 3px; }
 .nv-platform { display: flex; flex-direction: column; align-items: center; gap: 8px; min-width: 0; padding: 17px 8px 13px; border: 1px solid var(--ctrl-border); border-radius: 9px; color: var(--c-text-2); background: var(--glass-bg); opacity: 1; cursor: default; font: inherit; }
 .nv-platform svg { width: 25px; height: 25px; }
 .nv-platform-name { font-size: .83rem; font-weight: 600; }
-.nv-pending { font-size: .68rem; color: var(--c-muted); }
+.nv-platform-status { font-size: .68rem; line-height: 1.5; text-align: center; color: var(--c-muted); }
 .nv .nv-chips { display: flex; flex-wrap: wrap; gap: 7px; margin: 0; padding: 0; list-style: none; }
 .nv-chips li { margin: 0; padding: 5px 9px; border: 1px solid var(--ctrl-border); border-radius: 5px; font-size: .73rem; line-height: 1.4; color: var(--c-text-2); background: var(--ctrl-bg); }
 .nv-num { font-size: .8rem; font-weight: 600; color: var(--c-link-1); font-variant-numeric: tabular-nums; }

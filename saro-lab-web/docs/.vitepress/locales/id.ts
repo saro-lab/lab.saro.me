@@ -91,7 +91,15 @@ export const id: Messages = {
   unixtime_compare_note: 'Perbandingan menerima apa pun yang diterima factory, jadi Date atau angka biasa tidak perlu dikonversi.',
   unixtime_types: 'Tipe',
 
+  select_language: "Pilih bahasa",
+  search_language: "Cari bahasa",
+
   // NABI VIEW product page.
+  nabi_view_rename_title: "Ubah nama file sekaligus",
+  nabi_view_rename_alt: "Demo animasi NABI VIEW yang menunjukkan mouse menerapkan nama folder, mengganti teks, dan mengonfirmasi perubahan nama file",
+  nabi_view_rename_line1: "Pilih “Seragamkan nama” dari menu untuk mengubah nama semua gambar yang terbuka di folder saat ini. Gunakan nama folder diikuti nomor berurutan, lalu tentukan jumlah digitnya.",
+  nabi_view_rename_line2: "Anda juga dapat mencari dan mengganti teks yang sama pada nama file sekaligus. Kedua cara tetap mempertahankan ekstensi file asli.",
+  nabi_view_rename_line3: "Periksa pratinjau, lalu klik “Terapkan perubahan” di bagian bawah jendela untuk mengubah nama file. Fitur ini berlaku untuk file dalam folder lokal, bukan gambar di dalam arsip.",
   nabi_view_page_title: "NABI VIEW — Penampil gambar",
   nabi_view_page_description: "Jelajahi foto, komik, dan gambar buatan AI dengan NABI VIEW, penampil gambar gratis dan bersumber terbuka yang mendukung tampilan dua halaman, tayangan slide, dan informasi gambar.",
   nabi_view_logo: "Ikon kupu-kupu NABI VIEW dengan pegunungan hijau",
@@ -100,8 +108,9 @@ export const id: Messages = {
   nabi_view_intro_second: "Lihat dan kelola gambar dengan cepat dan mudah.",
   nabi_view_download: "Unduh",
   nabi_view_download_label: "Unduh untuk {platform}",
-  nabi_view_pending: "Dalam persiapan",
-  nabi_view_pending_label: "Unduhan untuk {platform} sedang disiapkan",
+  nabi_view_review: "Sedang ditinjau",
+  nabi_view_review_label: "Versi {platform} sedang ditinjau",
+  nabi_view_github_download: "Unduh dari GitHub",
   nabi_view_formats: "Ekstensi yang didukung",
   nabi_view_languages: "Bahasa yang didukung",
   nabi_view_language_list: "Daftar bahasa yang didukung",

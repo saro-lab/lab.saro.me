@@ -91,7 +91,15 @@ export const ja: Messages = {
   unixtime_compare_note: '比較関数はファクトリが受け取れる値なら何でも受け取るので、Date や数値を変換する必要はない。',
   unixtime_types: '型',
 
+  select_language: "言語を選択",
+  search_language: "言語を検索",
+
   // NABI VIEW product page.
+  nabi_view_rename_title: "ファイル名をまとめて変更",
+  nabi_view_rename_alt: "マウスでフォルダー名の適用、文字列の置換、変更の確定を順に行うNABI VIEWの名前変更アニメーション",
+  nabi_view_rename_line1: "メニューの「名前の正規化」で、現在のフォルダーで開いているすべての画像の名前をまとめて整理できます。フォルダー名の後に連番を付け、桁数も指定できます。",
+  nabi_view_rename_line2: "ファイル名に共通する文字列を検索して、一括で置換することもできます。どちらの方法でも元の拡張子は保持されます。",
+  nabi_view_rename_line3: "変更後の名前をプレビューで確認し、ウィンドウ下部の「変更を適用」を押すと実際の名前が変わります。ローカルフォルダーのファイルが対象で、圧縮ファイル内の画像は含まれません。",
   nabi_view_page_title: "NABI VIEW — 画像ビューアー",
   nabi_view_page_description: "写真、漫画、AI画像を快適に閲覧。見開き表示、スライドショー、画像情報の確認に対応した無料・オープンソースの画像ビューアー NABI VIEW。",
   nabi_view_logo: "緑の山を描いた NABI VIEW の蝶のアイコン",
@@ -100,8 +108,9 @@ export const ja: Messages = {
   nabi_view_intro_second: "画像をすばやく手軽に閲覧・整理できます。",
   nabi_view_download: "ダウンロード",
   nabi_view_download_label: "{platform} 版をダウンロード",
-  nabi_view_pending: "準備中",
-  nabi_view_pending_label: "{platform} 版のダウンロードは準備中",
+  nabi_view_review: "審査中",
+  nabi_view_review_label: "{platform} 版は審査中です",
+  nabi_view_github_download: "GitHubからダウンロード",
   nabi_view_formats: "対応する拡張子",
   nabi_view_languages: "対応言語",
   nabi_view_language_list: "対応言語一覧",

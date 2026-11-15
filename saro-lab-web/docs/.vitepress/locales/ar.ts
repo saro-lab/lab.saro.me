@@ -91,7 +91,15 @@ export const ar: Messages = {
   unixtime_compare_note: 'تقبل دوالّ المقارنة كلّ ما يقبله المُنشئ، فلا حاجة إلى تحويل Date أو عدد عادي.',
   unixtime_types: 'الأنواع',
 
+  select_language: "اختيار اللغة",
+  search_language: "البحث عن لغة",
+
   // NABI VIEW product page.
+  nabi_view_rename_title: "إعادة تسمية الملفات دفعة واحدة",
+  nabi_view_rename_alt: "عرض متحرك في NABI VIEW يوضح استخدام الماوس لتطبيق اسم المجلد واستبدال النص وتأكيد تغيير أسماء الملفات",
+  nabi_view_rename_line1: "اختر «توحيد الأسماء» من القائمة لإعادة تسمية جميع الصور المفتوحة في المجلد الحالي. استخدم اسم المجلد متبوعًا بأرقام متسلسلة، وحدد عدد خانات الأرقام.",
+  nabi_view_rename_line2: "يمكنك أيضًا البحث عن نص مشترك في أسماء الملفات واستبداله دفعة واحدة. تحافظ الطريقتان على امتدادات الملفات الأصلية.",
+  nabi_view_rename_line3: "راجع المعاينة ثم اضغط «تطبيق التغييرات» أسفل النافذة لتغيير أسماء الملفات فعليًا. تعمل الميزة مع ملفات المجلدات المحلية، ولا تشمل الصور داخل الأرشيفات.",
   nabi_view_page_title: "NABI VIEW — عارض صور",
   nabi_view_page_description: "تعرّف على NABI VIEW، عارض صور مجاني ومفتوح المصدر للصور والقصص المصوّرة والصور المولّدة بالذكاء الاصطناعي، يدعم عرض صفحتين وعروض الشرائح والاطّلاع على معلومات الصور.",
   nabi_view_logo: "أيقونة فراشة NABI VIEW تتضمن جبالًا خضراء",
@@ -100,8 +108,9 @@ export const ar: Messages = {
   nabi_view_intro_second: "تصفّح الصور ونظّمها بسرعة وسهولة.",
   nabi_view_download: "تنزيل",
   nabi_view_download_label: "تنزيل إصدار ⁦{platform}⁩",
-  nabi_view_pending: "قيد الإعداد",
-  nabi_view_pending_label: "تنزيل إصدار ⁦{platform}⁩ قيد الإعداد",
+  nabi_view_review: "قيد المراجعة",
+  nabi_view_review_label: "إصدار ⁦{platform}⁩ قيد المراجعة",
+  nabi_view_github_download: "تنزيل من ⁦GitHub⁩",
   nabi_view_formats: "امتدادات الملفات المدعومة",
   nabi_view_languages: "اللغات المدعومة",
   nabi_view_language_list: "قائمة اللغات المدعومة",
