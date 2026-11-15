@@ -1,19 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="512" height="512">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="512" height="512">
   <title>SARO Lab</title>
-  <!-- 크기가 다른 반짝임 셋. 오목한 변이라 축소에도 형태가 남고, 셋의 크기 차이가
-       리듬을 만든다. 투명 배경 — 파비콘(SVG)과 헤더 로고가 이 파일을 쓴다.
-       파비콘은 시스템 테마를 따라가야 해서 잉크를 미디어 쿼리로 뒤집는다. -->
-  <style>
-    .s1 { fill: #5b46b8; }
-    .s2 { fill: #7c68d8; }
-    .s3 { fill: #9a8ae8; }
-    @media (prefers-color-scheme: dark) {
-      .s1 { fill: #a99af0; }
-      .s2 { fill: #8f7ce6; }
-      .s3 { fill: #c9bdf9; }
-    }
-  </style>
-  <path class="s1" d="M13 5C14.28 10.44 15.56 11.72 21 13C15.56 14.28 14.28 15.56 13 21C11.72 15.56 10.44 14.28 5 13C10.44 11.72 11.72 10.44 13 5Z"/>
-  <path class="s3" d="M24 4C24.64 6.72 25.28 7.36 28 8C25.28 8.64 24.64 9.28 24 12C23.36 9.28 22.72 8.64 20 8C22.72 7.36 23.36 6.72 24 4Z"/>
-  <path class="s2" d="M23 17.5C23.88 21.24 24.76 22.12 28.5 23C24.76 23.88 23.88 24.76 23 28.5C22.12 24.76 21.24 23.88 17.5 23C21.24 22.12 22.12 21.24 23 17.5Z"/>
+  <!-- 컬러 시안 02: 청록 플라스크, 앰버 입구, S 모양의 투명한 여백.
+       헤더·파비콘·앱 아이콘·OG 카드가 공유하는 브랜드 마크 원본이다. -->
+  <defs>
+    <linearGradient id="saro-lab-teal" x1="200" y1="260" x2="410" y2="786" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0b8999"/><stop offset="1" stop-color="#087d8d"/>
+    </linearGradient>
+    <linearGradient id="saro-lab-turquoise" x1="400" y1="280" x2="690" y2="786" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#24b9ae"/><stop offset="1" stop-color="#1bafa5"/>
+    </linearGradient>
+    <linearGradient id="saro-lab-amber" x1="270" y1="14" x2="460" y2="259" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f9b734"/><stop offset="1" stop-color="#f3a824"/>
+    </linearGradient>
+    <mask id="saro-lab-cutout" maskUnits="userSpaceOnUse" x="0" y="0" width="800" height="800">
+      <rect width="800" height="800" fill="#fff"/>
+      <path fill="#000" d="M388 278C318 298 263 336 231 376C187 433 211 485 268 519C317 548 405 566 463 597C517 626 534 659 506 709C483 750 437 775 393 786H487C570 765 625 733 644 684C666 626 631 581 572 550C524 524 461 501 407 476C344 447 305 422 312 381C317 344 350 303 388 278Z"/>
+    </mask>
+  </defs>
+  <g mask="url(#saro-lab-cutout)">
+    <path fill="url(#saro-lab-teal)" d="M271 104H519V242Q519 250 526 261L755 650C798 723 758 786 660 786H137C39 786 0 724 43 650L264 261Q271 249 271 238Z"/>
+    <path fill="url(#saro-lab-turquoise)" d="M432 259C514 284 558 315 568 328L755 650C798 723 758 786 660 786H487C570 765 625 733 644 684C666 626 631 581 572 550C524 524 461 501 407 476C344 447 305 422 312 381C317 344 350 303 388 278Z"/>
+  </g>
+  <path fill="#12536a" d="M432 151L519 106V242Q519 250 526 261L568 328C514 284 466 268 432 259Z"/>
+  <path fill="url(#saro-lab-amber)" d="M270 14H519C548 14 568 36 568 64C568 92 548 113 519 113L432 151L264 259Q271 248 271 237V113H270C241 113 220 91 220 64C220 36 241 14 270 14Z"/>
+  <path fill="#df951b" d="M264 259L432 151V259Z"/>
 </svg>
