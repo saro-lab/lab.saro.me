@@ -5,8 +5,9 @@ node_modules
 docs/.vitepress/cache
 docs/.vitepress/dist
 
-
-
+# Upstream source archives for NABI Player
+/docs/public/app/nabi-player/native/*.tar.gz
+/docs/public/app/nabi-player/native/*.tar.xz
 
 # Cloudflare Wrangler
 .wrangler

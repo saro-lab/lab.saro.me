@@ -81,6 +81,15 @@ export const projects: Project[] = [
     descKey: 'proj_nabi_view_desc',
   },
   {
+    id: 'nabi-player',
+    name: 'NABI Player',
+    kind: 'app',
+    logo: '/logo/nabi-player.png',
+    path: '/app/nabi-player',
+    tagKey: 'proj_nabi_player_tag',
+    descKey: 'proj_nabi_player_desc',
+  },
+  {
     id: 'saro',
     name: 'saro.me',
     kind: 'portal',

@@ -54,7 +54,7 @@
     <section v-for="(feature, i) in features" :key="feature.title" class="nv-showcase" :aria-labelledby="`nv-feature-${i}`">
       <h2 :id="`nv-feature-${i}`"><span class="nv-num">{{ String(i + 1).padStart(2, '0') }}</span>{{ feature.title }}</h2>
       <ImageCarousel v-if="feature.slides" :slides="feature.slides" :label="feature.title" />
-      <figure v-else>
+      <figure v-else-if="feature.image">
         <img :src="feature.image" :alt="feature.alt" :width="feature.width ?? 1093" :height="feature.height ?? 760" loading="lazy" decoding="async" />
       </figure>
       <p v-for="line in feature.lines" :key="line" class="nv-desc">{{ line }}</p>
@@ -246,8 +246,6 @@ const features = computed<Feature[]>(() => [
   },
   {
     title: t('nabi_view_archive_title'),
-    image: '/img/nabi-view/07.webp',
-    alt: t('nabi_view_archive_alt'),
     lines: [
       t('nabi_view_archive_line1'),
       t('nabi_view_archive_line2'),

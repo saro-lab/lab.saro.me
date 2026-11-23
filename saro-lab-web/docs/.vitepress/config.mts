@@ -59,10 +59,11 @@ export default defineConfig({
     }
 
     const { locale, path } = splitLocale(pageData.relativePath)
-    if (path === '/app/nabi-view') {
+    if (path === '/app/nabi-view' || path === '/app/nabi-player') {
       const text = messages[(locale || DEFAULT_LOCALE) as LocaleCode]
-      pageData.title = text.nabi_view_page_title
-      pageData.description = text.nabi_view_page_description
+      const isPlayer = path === '/app/nabi-player'
+      pageData.title = isPlayer ? text.nabi_player_page_title : text.nabi_view_page_title
+      pageData.description = isPlayer ? text.proj_nabi_player_desc : text.nabi_view_page_description
       pageData.frontmatter.title = pageData.title
       pageData.frontmatter.description = pageData.description
       pageData.frontmatter.contentLanguage = text.lang
